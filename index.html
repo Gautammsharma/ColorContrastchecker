@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Contrast Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Contrast Checker</h1>
+        <div class="input-section">
+            <label for="textColor">Text Color (Hex):</label>
+            <input type="color" id="textColorPicker" value="#000000">
+            <input type="text" id="textColor" value="#000000" maxlength="7" pattern="^#([A-Fa-f0-9]{6})$" title="Enter a valid hex color code." placeholder="#000000">
+
+            <label for="bgColor">Background Color (Hex):</label>
+            <input type="color" id="bgColorPicker" value="#ffffff">
+            <input type="text" id="bgColor" value="#ffffff" maxlength="7" pattern="^#([A-Fa-f0-9]{6})$" title="Enter a valid hex color code." placeholder="#ffffff">
+        </div>
+
+        <button id="checkContrast">Check Contrast</button>
+
+        <div class="result-section">
+            <p id="result"></p>
+        </div>
+
+        <div id="preview" class="preview">
+            <p>This is a preview of the text color on the background</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
